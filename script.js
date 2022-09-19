@@ -13,7 +13,7 @@ function addBooks(newBook) {
 	const bookStore = `<div class = "book">
 	<h2> Title: ${newBook.title}</h2> 
 	<h2> Author: ${newBook.author}</h2>
-	<button id="delete" type="button">Remove</button>
+	<button class="delete" type="button">Remove</button>
 	<hr>
 	</div>`;
 	bookList.innerHTML += bookStore;
@@ -28,3 +28,15 @@ addBooks(newBook);
 title.value ='';
 author.value = '';
 });
+
+//Remove books
+bookList.addEventListener('click', (eve) => {
+
+	if(eve.target.classList.contains('delete')) {
+		document.querySelector('.list').removeChild(eve.target.parentElement);
+		const x = eve.target.parentElement;
+		const removeBook = storedBooks.find((item)=>item.title===x.firstChild.innerText);
+		storedBooks.splice(storedBooks.indexOf(removeBook), 1);
+		
+	}
+	});
