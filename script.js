@@ -31,9 +31,9 @@ form.addEventListener('input', () => {
 });
 addBook.addEventListener('click', (e) => {
   if (title.value === '' || author.value === '') {
-  e.preventDefault();
+    e.preventDefault();
   }
-  else{
+  else {
     const newBook = new Book(title.value, author.value);
     addBooks(newBook);
     title.value = '';
