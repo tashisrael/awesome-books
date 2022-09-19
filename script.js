@@ -10,33 +10,48 @@ const Book = function objBook(title, author) {
 let storedBooks = [];
 
 function addBooks(newBook) {
-	const bookStore = `<div class = "book">
-	<h2> Title: ${newBook.title}</h2> 
-	<h2> Author: ${newBook.author}</h2>
-	<button class="delete" type="button">Remove</button>
-	<hr>
-	</div>`;
-	bookList.innerHTML += bookStore;
-	return bookList.innerHTML;
+const bookStore = `<div class = "book">
+<h2> Title: ${newBook.title}</h2> 
+<h2> Author: ${newBook.author}</h2>
+<button class="delete" type="button">Remove</button>
+<hr>
+</div>`;
+bookList.innerHTML += bookStore;
+return bookList.innerHTML;
 }
+
+//local storage
+let localForm = { title: '', author: ''};
+if (localStorage.localForm) {
+localForm = JSON.parse(localStorage.localForm);
+title.value = localForm.title;
+author.value = localForm.author;
+}
+form.addEventListener('input', () => {
+localStorage.localForm = JSON.stringify(localForm);
+localForm.title = title.value;
+localForm.author = author.value;
+});
 
 addBook.addEventListener('click', (e) => {
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
+if (title.value === '' || author.value === '') {
+	e.preventDefault();
+}
+else{
 const newBook = new Book(title.value, author.value);
 addBooks(newBook);
 title.value ='';
-author.value = '';
+author.value = '';}
 });
 
 //Remove books
 bookList.addEventListener('click', (eve) => {
-
-	if(eve.target.classList.contains('delete')) {
-		document.querySelector('.list').removeChild(eve.target.parentElement);
-		const x = eve.target.parentElement;
-		const removeBook = storedBooks.find((item)=>item.title===x.firstChild.innerText);
-		storedBooks.splice(storedBooks.indexOf(removeBook), 1);
-		
-	}
-	});
+if(eve.target.classList.contains('delete')) {
+document.querySelector('.list').removeChild(eve.target.parentElement);
+const x = eve.target.parentElement;
+const removeBook = storedBooks.find((item)=>item.title===x.firstChild.innerText);
+storedBooks.splice(storedBooks.indexOf(removeBook), 1);
+}
+});
