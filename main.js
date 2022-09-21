@@ -48,7 +48,6 @@ class Book {
       <button type="button" class= "delete">Remove </button>
       </div>
       `;
-
     list.appendChild(text);
   }
 

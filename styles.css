@@ -1,3 +1,58 @@
 body {
   padding: 0;
 }
+
+#list {
+  border: 1px solid black;
+}
+
+.bkHtml {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  background-color: #eaecee;
+}
+
+.bookauthor {
+  display: flex;
+}
+
+.awesome {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#form {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+}
+
+#btn {
+ float: right;
+}
+
+h2 {
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+}
+
+hr {
+  width: 7rem;
+  margin-top: 20px;
+  height: 2px;
+  background-color: black;
+}
+
+button {
+  box-shadow: 2px 2px black;
+}
