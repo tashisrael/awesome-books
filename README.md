@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 - Code editor (Vs code)
 
 ### Setup
-- clone 'https://github.com/tashisrael/Personal-Portfolio.git '
+- clone 'https://github.com/tashisrael/awesome-books.git'
 - Setup Linters by running following commands in your terminal:
 
 - npm install --save-dev stylelint@13.x stylelint-scss@3.x - - - stylelint-config-standard@21.x stylelint-csstree-validator@1.x (Install the StyleHint linters)
@@ -46,11 +46,17 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@twitterhandle](https://twitter.com/tashisrael)
 - Linkedin: [@linkedinhandle](https://www.linkedin.com/in/tashobya-israel-6a66b0181/l)
 
-👤 **Balikuddembe Emmanuel**
+👤 **Banteze Aidan**
 
-- GitHub: [@githubhandle](https://github.com/balikuddembe)
-- Twitter: [@twitterhandle](https://twitter.com/BalixEmma)
-- Linkedin: [@linkedinhandle](https://www.linkedin.com/in/emmanuel-balikuddembe-763765b2/)
+- GitHub: [@aidan-bn](https://github.com/aidan-bn)
+- Twitter: [@aidan-bn](https://twitter.com/aidan-bn)
+- LinkedIn: [Aidan-bn](https://linkedin.com/in/aidan-bn)
+
+👤 **Irirwanirira Joseph**
+
+- GitHub: [@Irirwanirira](https://github.com/Irirwanirira)
+- Twitter: [@Iri_joseph](https://twitter.com/Irirwanirira)
+- LinkedIn: [Joseph IRIRWANIRIRA](https://linkedin.com/in/joseph-irirwanirira-74666623a/)
 
 
 ## 🤝 Contributing
