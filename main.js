@@ -4,12 +4,17 @@ const title = document.getElementById('title');
 const addBtn = document.getElementById('btn');
 class Book {
   availableBooks;
+
   constructor() {
     this.getFromLocalStorage();
   }
+
   saveToLocalStorage = (addedBooks) => localStorage.setItem('availableBooks', JSON.stringify(addedBooks));
-  getFromLocalStorage = () => {this.availableBooks = JSON.parse(localStorage.getItem('availableBooks')) ?? [];
+
+  getFromLocalStorage = () => {
+    this.availableBooks = JSON.parse(localStorage.getItem('availableBooks')) ?? [];
   };
+
   displayItem = () => {
     this.getFromLocalStorage();
     displaySection.innerHTML = '';
@@ -20,26 +25,30 @@ class Book {
         </div>`;
     });
   };
+
   addBook = (e) => {
-  e.preventDefault();
-  const addedBook = {
-    title: title.value,
-    author: author.value,
+    e.preventDefault();
+    const addedBook = {
+      title: title.value,
+      author: author.value,
+    };
+    this.availableBooks.push(addedBook);
+    this.clear();
+    this.saveToLocalStorage(this.availableBooks);
+    this.displayItem();
   };
-  this.availableBooks.push(addedBook);
-  this.clear();
-  this.saveToLocalStorage(this.availableBooks);
-  this.displayItem();
-};
+
   deleteBook = (i) => {
-  const filterBooks = this.availableBooks.filter((availableBook) => availableBook !== this.availableBooks[i]);
-  this.saveToLocalStorage(filterBooks);
-  this.displayItem();
-};
-clear = () => {
-    title.value = '';
-    author.value = '';
+    const filterBooks = this.availableBooks
+      .filter((availableBook) => availableBook !== this.availableBooks[i]);
+    this.saveToLocalStorage(filterBooks);
+    this.displayItem();
   };
+
+clear = () => {
+  title.value = '';
+  author.value = '';
+};
 }
 const availableBook = new Book();
 document.addEventListener('DOMContentLoaded', () => {
