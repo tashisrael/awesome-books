@@ -56,10 +56,10 @@ class Book {
       el.parentElement.remove();
     }
   }
-  static clearFields() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#author').value = '';
-  }
+  // static clearFields() {
+  //   document.querySelector('#title').value = '';
+  //   document.querySelector('#author').value = '';
+  // }
 }
 
 document.addEventListener('DOMContentLoaded', Book.displayBooks);
@@ -76,6 +76,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 document.querySelector('#list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
 
-  Book.newClass(e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
-    e.target.previousSibling.previousSibling.textContent);
+  Book.newClass(e.target.previousSibling.previousSibling.previousSibling.previousSibling
+    .textContent,
+  e.target.previousSibling.previousSibling.textContent);
 });
