@@ -6,18 +6,6 @@ body {
   border: 1px solid black;
 }
 
-.bkHtml {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  background-color: #eaecee;
-}
-
-.bookauthor {
-  display: flex;
-}
-
 .awesome {
   margin: auto;
   width: 50%;
@@ -42,8 +30,14 @@ h2 {
   text-align: center;
 }
 
-h4 {
+.availableBook {
+  display: flex;
+  justify-content: space-between;
+  gap: 8.5rem;
+  align-items: center;
+  background-color: #eaecee;
   margin: 0;
+  padding: 0 10px;
 }
 
 hr {
