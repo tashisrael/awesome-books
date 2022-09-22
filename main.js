@@ -2,12 +2,78 @@ const displaySection = document.querySelector('.list');
 const author = document.getElementById('author');
 const title = document.getElementById('title');
 const addBtn = document.getElementById('btn');
+const contactMenu = document.querySelector('#contact');
+const contactDiv = document.querySelector('#contact-link');
+const formMenu = document.querySelector('#awesome-books');
+const formLink = document.querySelector('#add-link');
+const listMenu = document.querySelector('#list');
+const listLink = document.querySelector('#list-link');
+const date = document.querySelector('.date');
+
+contactDiv.addEventListener('click', () => {
+  contactMenu.style.display = 'block';
+  formMenu.style.display = 'none';
+  listMenu.style.display = 'none';
+  
+})
+
+listLink.addEventListener('click', () => {
+  contactMenu.style.display = 'none';
+  formMenu.style.display = 'none';
+  listMenu.style.display = 'block';
+  
+})
+
+formLink.addEventListener('click', () => {
+  contactMenu.style.display = 'none';
+  formMenu.style.display = 'block';
+  listMenu.style.display = 'none';
+  
+})
+
+const now = () => {
+  const newDate = new Date();
+  date.innerHTML = `${newDate.toDateString()}, ${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}pm `;
+  setTimeout(now, 1000);
+}
+window.onload = now();
+
+if(window == listMenu.style.display.block ){
+const refresh = () => {
+  contactMenu.style.display = 'none';
+  formMenu.style.display = 'none';
+  listMenu.style.display = 'block';
+
+}
+
+window.onload = refresh();
+} else if(window == formMenu.style.display.block){
+  const refresh = () => {
+    contactMenu.style.display = 'none';
+    formMenu.style.display = 'block';
+    listMenu.style.display = 'none';
+  
+  }
+  
+  window.onload = refresh();
+  }
+else {
+
+    const refresh = () => {
+      contactMenu.style.display = 'block';
+      formMenu.style.display = 'none';
+      listMenu.style.display = 'none';
+    }
+    
+    window.onload = refresh();
+  
+  }
+
 class Book {
   availableBooks;
 
   constructor() {
     this.getFromLocalStorage();
-    
   }
 
   saveToLocalStorage = (addedBooks) => localStorage.setItem('availableBooks', JSON.stringify(addedBooks));
