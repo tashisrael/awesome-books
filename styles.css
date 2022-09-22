@@ -38,17 +38,17 @@ h4 {
   font-weight: bold;
 }
 
-.ul-links li a:hover {
-  color: #4472e7;
-}
-
 li {
   margin-right: 10px;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
+}
+
+.ul-links li a:hover {
+  color: #4472e7;
 }
 
 #form {
