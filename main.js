@@ -7,6 +7,7 @@ class Book {
 
   constructor() {
     this.getFromLocalStorage();
+    
   }
 
   saveToLocalStorage = (addedBooks) => localStorage.setItem('availableBooks', JSON.stringify(addedBooks));

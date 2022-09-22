@@ -10,43 +10,25 @@ body {
   margin: auto;
   width: 50%;
   padding: 10px;
+  
 }
 
-#form {
-  text-align: center;
-  width: 40%;
-  margin: auto;
-}
-
-input {
-  width: 100%;
-}
-
-#btn {
-  float: right;
-}
-
-h2 {
-  text-align: center;
-}
-
-.availableBook {
+.title{
+  border: 2px solid;
   display: flex;
-  justify-content: space-between;
-  gap: 8.5rem;
   align-items: center;
-  background-color: #eaecee;
-  margin: 0;
-  padding: 0 10px;
+  justify-content: space-between;
+  padding: 0 5px;
 }
 
-hr {
-  width: 7rem;
-  margin-top: 20px;
-  height: 2px;
-  background-color: black;
+.links{
+  display: flex;
+  margin-left: 20px;
 }
 
-button {
-  box-shadow: 2px 2px black;
+.ul-links {
+  list-style: none;
+  display: flex;
+  margin-right: 5px;
 }
+
