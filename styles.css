@@ -1,3 +1,52 @@
 body {
   padding: 0;
 }
+
+#list {
+  border: 1px solid black;
+}
+
+.awesome {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#form {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+}
+
+#btn {
+  float: right;
+}
+
+h2 {
+  text-align: center;
+}
+
+.availableBook {
+  display: flex;
+  justify-content: space-between;
+  gap: 8.5rem;
+  align-items: center;
+  background-color: #eaecee;
+  margin: 0;
+  padding: 0 10px;
+}
+
+hr {
+  width: 7rem;
+  margin-top: 20px;
+  height: 2px;
+  background-color: black;
+}
+
+button {
+  box-shadow: 2px 2px black;
+}
