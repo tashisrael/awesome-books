@@ -9,65 +9,43 @@ const formLink = document.querySelector('#add-link');
 const listMenu = document.querySelector('#list');
 const listLink = document.querySelector('#list-link');
 const date = document.querySelector('.date');
+const all = document.querySelector('#all');
 
 contactDiv.addEventListener('click', () => {
   contactMenu.style.display = 'block';
   formMenu.style.display = 'none';
   listMenu.style.display = 'none';
-  
-})
+  all.style.display = 'none';
+});
 
 listLink.addEventListener('click', () => {
   contactMenu.style.display = 'none';
   formMenu.style.display = 'none';
   listMenu.style.display = 'block';
-  
-})
+  all.style.display = 'block';
+});
 
 formLink.addEventListener('click', () => {
   contactMenu.style.display = 'none';
   formMenu.style.display = 'block';
   listMenu.style.display = 'none';
-  
-})
+  all.style.display = 'none';
+});
 
 const now = () => {
   const newDate = new Date();
   date.innerHTML = `${newDate.toDateString()}, ${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}pm `;
   setTimeout(now, 1000);
-}
+};
 window.onload = now();
 
-if(window == listMenu.style.display.block ){
 const refresh = () => {
   contactMenu.style.display = 'none';
   formMenu.style.display = 'none';
   listMenu.style.display = 'block';
-
-}
-
+  all.style.display = 'block';
+};
 window.onload = refresh();
-} else if(window == formMenu.style.display.block){
-  const refresh = () => {
-    contactMenu.style.display = 'none';
-    formMenu.style.display = 'block';
-    listMenu.style.display = 'none';
-  
-  }
-  
-  window.onload = refresh();
-  }
-else {
-
-    const refresh = () => {
-      contactMenu.style.display = 'block';
-      formMenu.style.display = 'none';
-      listMenu.style.display = 'none';
-    }
-    
-    window.onload = refresh();
-  
-  }
 
 class Book {
   availableBooks;

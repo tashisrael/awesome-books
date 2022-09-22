@@ -10,18 +10,23 @@ body {
   margin: auto;
   width: 50%;
   padding: 10px;
-  
 }
 
-.title{
+.title {
   border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5px;
+  padding: 0 10px;
+  height: 50px;
 }
 
-.links{
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.links {
   display: flex;
   margin-left: 20px;
 }
@@ -30,11 +35,15 @@ body {
   list-style: none;
   display: flex;
   margin-right: 5px;
+  font-weight: bold;
+}
+
+.ul-links li a:hover {
+  color: #4472e7;
 }
 
 li {
   margin-right: 10px;
-
 }
 
 a{
@@ -51,6 +60,7 @@ a{
 .date {
   float: right;
 }
+
 input {
   width: 100%;
 }
@@ -68,17 +78,16 @@ h2 {
   justify-content: space-between;
   gap: 8.5rem;
   align-items: center;
-  
+  padding: 0 15px;
   margin: 0;
-  padding: 0 10px;
 }
 
 .availableBook:nth-child(even) {
-  background-color: #eaecee;
+  background-color: #fff;
 }
 
 .availableBook:nth-child(odd) {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 hr {
@@ -92,11 +101,11 @@ button {
   box-shadow: 2px 2px black;
 }
 
-.contact{
+.contact {
   text-align: center;
 }
 
-.contact-list{
+.contact-list {
   list-style: none;
 }
 
@@ -114,4 +123,3 @@ footer {
   bottom: 5px;
   width: 100%;
 }
-
